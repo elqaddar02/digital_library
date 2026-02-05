@@ -1,0 +1,87 @@
+{
+  "header": {
+    "collections": "Collections",
+    "themes": "Thèmes",
+    "exhibitions": "Expositions",
+    "resources": "Ressources",
+    "about": "À propos",
+    "signIn": "Connexion",
+    "language": "Langue"
+  },
+  "hero": {
+    "title": "Bibliothèque nationale du royaume du maroc",
+    "subtitle": "Explorez des millions de documents historiques, de manuscrits, de photographies et d'artefacts du riche patrimoine culturel de notre nation.",
+    "searchPlaceholder": "Rechercher des collections, documents, manuscrits, sujets...",
+    "searchButton": "Rechercher",
+    "featuredLabel": "À la une dans nos collections"
+  },
+  "latestAdditions": {
+    "title": "Derniers Ajouts",
+    "description": "Découvrez nos nouvelles collections et les matériaux récemment numérisés",
+    "viewAllButton": "Voir toutes les collections",
+    "viewDocument": "Voir le document"
+  },
+  "featuredCollections": {
+    "title": "Collections en vedette",
+    "description": "Parcourez nos collections les plus consultées"
+  },
+  "exploreCategories": {
+    "title": "Catégories",
+    "description": "Explorez nos ressources organisées par catégorie thématique",
+    "viewAllButton": "Voir toutes les catégories"
+  },
+  "footer": {
+    "institution": "Bibliothèque nationale",
+    "institutionDescription": "Dédiée à la préservation et à l'accès au patrimoine culturel et aux archives historiques de notre nation pour les chercheurs, les pédagogues et le public.",
+    "collections": "Collections",
+    "browseCollections": "Parcourir les collections",
+    "themes": "Thèmes",
+    "exhibitions": "Expositions",
+    "recentAdditions": "Nouveaux ajouts",
+    "researchers": "Zone chercheurs",
+    "aboutInstitution": "Établissement",
+    "about": "À propos",
+    "mission": "Mission",
+    "partnerships": "Partenariats",
+    "news": "Actualités",
+    "careers": "Carrières",
+    "legal": "Juridique",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "copyright": "Droits d'auteur",
+    "accessibility": "Accessibilité",
+    "sitemap": "Plan du site",
+    "contact": "Contact",
+    "address": "Bâtiment des Archives nationales",
+    "city": "District du patrimoine, Ville-capitale",
+    "phone": "+212 (555) 123-4567",
+    "email": "info@bibliotheque.gov",
+    "allRights": "Tous droits réservés",
+    "reportIssue": "Signaler un problème",
+    "feedback": "Feedback",
+    "status": "État du service"
+  },
+  "statistics": {
+    "byTheNumbers": "Par les chiffres",
+    "title": "Ibn Battuta en chiffres",
+    "documents": "Articles numérisés",
+    "collections": "Collections",
+    "users": "Utilisateurs actifs",
+    "countries": "Pays",
+    "trust": "Représentant le patrimoine diversifié et le savoir de notre nation, conservés et préservés pour les générations futures."
+  },
+  "immersiveExhibition": {
+    "label": "Exposition à la une",
+    "title": "Patrimoine et mémoire nationale",
+    "description": "Une sélection curatée de documents et artefacts explorant les thèmes centraux de notre histoire institutionnelle et de notre patrimoine culturel.",
+    "narrative": "Ces collections offrent un regard approfondi sur les périodes clés de notre développement national, préservées et accessibles pour les chercheurs, étudiants et citoyens.",
+    "cta": "Découvrir l'exposition"
+  },
+  "partnerResources": {
+    "title": "Ressources électroniques",
+    "description": "Accédez à des collections et outils de recherche développés par nos partenaires institutionnels pour enrichir votre exploration du patrimoine.",
+    "cta": "Explorer",
+    "footerText": "Découvrez plus de partenaires et de collaborations qui soutiennent notre mission de préservation et d'accès.",
+    "footerCta": "Tous les partenaires"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "header": {
+    "collections": "Collections",
+    "themes": "Themes",
+    "exhibitions": "Exhibitions",
+    "resources": "Resources",
+    "about": "About",
+    "signIn": "Sign In",
+    "language": "Language"
+  },
+  "hero": {
+    "title": "Search the National Knowledge",
+    "subtitle": "Explore millions of historical documents, manuscripts, photographs, and artifacts from our nation's rich cultural heritage.",
+    "searchPlaceholder": "Search collections, documents, manuscripts, topics...",
+    "searchButton": "Search",
+    "featuredLabel": "Featured in our collections"
+  },
+  "latestAdditions": {
+    "title": "Latest Additions",
+    "description": "Discover our newest collections and recently digitized materials",
+    "viewAllButton": "View All Collections",
+    "viewDocument": "View document"
+  },
+  "featuredCollections": {
+    "title": "Featured Collections",
+    "description": "Browse our most popular collections"
+  },
+  "exploreCategories": {
+    "title": "Categories",
+    "description": "Explore our resources organized by thematic category",
+    "viewAllButton": "View All Categories"
+  },
+  "footer": {
+    "institution": "National Library",
+    "institutionDescription": "Dedicated to preserving and providing access to our nation's cultural heritage and historical records for researchers, educators, and the public.",
+    "collections": "Collections",
+    "browseCollections": "Browse Collections",
+    "themes": "Themes",
+    "exhibitions": "Exhibitions",
+    "recentAdditions": "Recent Additions",
+    "researchers": "Researcher Zone",
+    "aboutInstitution": "Institution",
+    "about": "About",
+    "mission": "Mission",
+    "partnerships": "Partnerships",
+    "news": "News",
+    "careers": "Careers",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "copyright": "Copyright",
+    "accessibility": "Accessibility",
+    "sitemap": "Sitemap",
+    "contact": "Contact",
+    "address": "National Archives Building",
+    "city": "Heritage District, Capital City",
+    "phone": "+1 (555) 123-4567",
+    "email": "info@library.gov",
+    "allRights": "All rights reserved",
+    "reportIssue": "Report an Issue",
+    "feedback": "Feedback",
+    "status": "Service Status"
+  },
+  "statistics": {
+    "byTheNumbers": "By the Numbers",
+    "title": "Ibn Battuta in Numbers",
+    "documents": "Digital Items",
+    "collections": "Collections",
+    "users": "Active Users",
+    "countries": "Countries",
+    "trust": "Representing the diverse heritage and knowledge of our nation, curated and preserved for future generations."
+  },
+  "immersiveExhibition": {
+    "label": "Featured Exhibition",
+    "title": "Heritage and National Memory",
+    "description": "A carefully curated selection of documents and artifacts exploring central themes of our institutional history and cultural heritage.",
+    "narrative": "These collections offer an in-depth look at key periods of our national development, preserved and accessible for scholars, students, and citizens alike.",
+    "cta": "Discover the Exhibition"
+  },
+  "partnerResources": {
+    "title": "Electronic Resources",
+    "description": "Access collections and research tools developed by our institutional partners to enrich your exploration of cultural heritage.",
+    "cta": "Explore",
+    "footerText": "Discover more partners and collaborations supporting our mission of preservation and open access.",
+    "footerCta": "All Partners"
+  }
+}
