@@ -1,6 +1,5 @@
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, Zap } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import bgExposition from '../assets/images/ressources/background.jpg';
 
 interface Partner {
     id: string;
@@ -10,6 +9,15 @@ interface Partner {
     url: string;
     category: string;
 }
+
+const categoryColors: Record<string, { bg: string; text: string; border: string }> = {
+    'International': { bg: 'bg-teal-50', text: 'text-teal-700', border: 'border-teal-200' },
+    'Standards': { bg: 'bg-gold-50', text: 'text-gold-700', border: 'border-gold-200' },
+    'Archive': { bg: 'bg-teal-50', text: 'text-teal-700', border: 'border-teal-200' },
+    'Network': { bg: 'bg-gold-50', text: 'text-gold-700', border: 'border-gold-200' },
+    'Community': { bg: 'bg-teal-50', text: 'text-teal-700', border: 'border-teal-200' },
+    'Platform': { bg: 'bg-gold-50', text: 'text-gold-700', border: 'border-gold-200' }
+};
 
 export default function PartnerResources() {
     const { t } = useTranslation();
@@ -66,90 +74,99 @@ export default function PartnerResources() {
     ];
 
     return (
-        <section
-            className="relative py-20 md:py-28 overflow-hidden"
-
-        >
-            <div
-                className="absolute inset-0 bg-cover bg-center"
-                style={{
-                    backgroundImage: `url(${bgExposition})`,
-                    opacity: 0.2, // Adjust this value (0.4 = 40% opacity)
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                }}
-            />
-             <div className="absolute inset-0 bg-amber-200/10"  />
-            {/* Dark Overlay */}
-            {/* <div className="absolute inset-0 bg-black/10" /> */}
+        <section className="relative py-24 md:py-32 overflow-hidden bg-gradient-to-b from-white via-teal-50/30 to-white">
+            {/* Decorative Elements */}
+            <div className="absolute top-0 right-0 w-96 h-96 bg-gold-100/20 rounded-full blur-3xl -mr-48 -mt-48" />
+            <div className="absolute bottom-0 left-0 w-96 h-96 bg-teal-100/20 rounded-full blur-3xl -ml-48 -mb-48" />
 
             {/* Content */}
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
-                <div className="mb-12 md:mb-16 text-center">
-                    <h2 className="font-serif text-3xl md:text-4xl text-heritage-900 mb-4">
+                <div className="mb-16 md:mb-20 text-center max-w-3xl mx-auto">
+                    <div className="inline-flex items-center justify-center gap-2 mb-6">
+                        <div className="h-1 w-8 bg-gradient-to-r from-teal-500 to-transparent" />
+                        <span className="text-sm font-semibold text-teal-700 uppercase tracking-wide">Collaborations</span>
+                        <div className="h-1 w-8 bg-gradient-to-l from-teal-500 to-transparent" />
+                    </div>
+                    <h2 className="font-serif text-4xl md:text-5xl text-heritage-900 mb-6 leading-tight">
                         {t('partnerResources.title')}
                     </h2>
-                    <p className="text-lg text-heritage-700 max-w-2xl mx-auto">
+                    <p className="text-lg text-heritage-600 leading-relaxed">
                         {t('partnerResources.description')}
                     </p>
                 </div>
 
                 {/* Partner Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {partners.map((partner) => (
-                        <article
-                            key={partner.id}
-                            className="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 border border-heritage-100 hover:border-gold-200 flex flex-col h-full"
-                        >
-                            {/* Logo Container */}
-                            <div className="bg-heritage-50 p-6 h-28 flex items-center justify-center overflow-hidden border-b border-heritage-100 group-hover:bg-heritage-100 transition-colors duration-300">
-                                <img
-                                    src={partner.logo}
-                                    alt={`${partner.name} logo`}
-                                    className="max-w-full max-h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
-                                />
-                            </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {partners.map((partner, index) => {
+                        const colors = categoryColors[partner.category] || categoryColors['International'];
+                        return (
+                            <article
+                                key={partner.id}
+                                className="group relative bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-heritage-100 hover:border-gold-300 flex flex-col h-full hover:-translate-y-1"
+                            >
+                                {/* Accent Bar */}
+                                <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${
+                                    index % 2 === 0 ? 'from-teal-500 via-teal-400 to-transparent' : 'from-gold-500 via-gold-400 to-transparent'
+                                }`} />
 
-                            {/* Content */}
-                            <div className="p-6 flex flex-col flex-1">
-                                {/* Partner Name */}
-                                <h3 className="font-serif text-lg text-heritage-900 font-semibold mb-1 group-hover:text-gold-600 transition-colors">
-                                    {partner.name}
-                                </h3>
+                                {/* Logo Container */}
+                                <div className={`relative ${colors.bg} p-8 h-32 flex items-center justify-center overflow-hidden border-b ${colors.border} group-hover:brightness-110 transition-all duration-300`}>
+                                    <img
+                                        src={partner.logo}
+                                        alt={`${partner.name} logo`}
+                                        className="max-w-full max-h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300 group-hover:scale-105"
+                                    />
+                                </div>
 
-                                {/* Category Badge */}
-                                <span className="inline-block text-xs font-medium text-heritage-600 uppercase tracking-wide mb-3 w-fit">
-                                    {partner.category}
-                                </span>
+                                {/* Content */}
+                                <div className="p-6 flex flex-col flex-1">
+                                    {/* Partner Name */}
+                                    <h3 className="font-serif text-xl text-heritage-900 font-semibold mb-2 group-hover:text-teal-700 transition-colors">
+                                        {partner.name}
+                                    </h3>
 
-                                {/* Description */}
-                                <p className="text-sm text-heritage-600 leading-relaxed mb-6 flex-1">
-                                    {partner.description}
-                                </p>
+                                    {/* Category Badge */}
+                                    <div className="mb-4">
+                                        <span className={`inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full ${colors.bg} ${colors.text} border ${colors.border}`}>
+                                            <Zap className="w-3 h-3" />
+                                            {partner.category}
+                                        </span>
+                                    </div>
 
-                                {/* Secondary CTA */}
-                                <a
-                                    href={partner.url}
-                                    className="inline-flex items-center gap-2 text-sm font-medium text-gold-600 hover:text-gold-700 group/link transition-colors"
-                                    aria-label={`Explore ${partner.name} resources`}
-                                >
-                                    {t('partnerResources.cta')}
-                                    <ExternalLink className="w-4 h-4 opacity-60 group-hover/link:opacity-100 group-hover/link:translate-x-0.5 transition-all" />
-                                </a>
-                            </div>
-                        </article>
-                    ))}
+                                    {/* Description */}
+                                    <p className="text-sm text-heritage-600 leading-relaxed mb-6 flex-1">
+                                        {partner.description}
+                                    </p>
+
+                                    {/* CTA Link */}
+                                    <a
+                                        href={partner.url}
+                                        className="inline-flex items-center gap-2 text-sm font-semibold text-teal-600 hover:text-teal-700 group/link transition-all"
+                                        aria-label={`Explore ${partner.name} resources`}
+                                    >
+                                        <span className="relative">
+                                            {t('partnerResources.cta')}
+                                            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-teal-600 group-hover/link:w-full transition-all duration-300" />
+                                        </span>
+                                        <ExternalLink className="w-4 h-4 group-hover/link:translate-x-1 group-hover/link:translate-y-0.5 transition-transform" />
+                                    </a>
+                                </div>
+                            </article>
+                        );
+                    })}
                 </div>
 
-                {/* Footer CTA */}
-                <div className="mt-16 text-center">
-                    <p className="text-gray-100 mb-6 text-sm">
-                        {t('partnerResources.footerText')}
-                    </p>
-                    <button className="px-6 py-3 border-2 border-white text-white rounded-sm hover:bg-white/10 transition-colors font-medium text-sm">
-                        {t('partnerResources.footerCta')}
-                    </button>
+                {/* Footer CTA Section */}
+                <div className="mt-20 pt-16 border-t border-heritage-100">
+                    <div className="max-w-2xl mx-auto text-center">
+                        <p className="text-heritage-600 mb-8 text-base leading-relaxed">
+                            {t('partnerResources.footerText')}
+                        </p>
+                        <button className="px-8 py-3 bg-gradient-to-r from-teal-600 to-teal-700 text-white rounded-lg hover:from-teal-700 hover:to-teal-800 transition-all duration-300 font-semibold text-sm shadow-md hover:shadow-lg hover:-translate-y-0.5">
+                            {t('partnerResources.footerCta')}
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>
