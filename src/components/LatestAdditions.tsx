@@ -1,6 +1,12 @@
 import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import carteImage from '../assets/images/latestAdditions/Carte.jpeg';
+import estampeImage from '../assets/images/latestAdditions/Estampe.jpeg';
+import journalImage from '../assets/images/latestAdditions/Journal.jpeg';
+import livreImage from '../assets/images/latestAdditions/Livre.jpeg';
+import manuscritImage from '../assets/images/latestAdditions/Manuscrit.jpeg';
+import revueImage from '../assets/images/latestAdditions/Revue.jpeg';
 
 interface CardItem {
   id: string;
@@ -19,7 +25,7 @@ export default function LatestAdditions() {
       title: t('latestAdditions.items.1.title'),
       description: t('latestAdditions.items.1.description'),
       category: t('latestAdditions.items.1.category'),
-      image: '/src/assets/images/latestAdditions/Carte.jpeg',
+      image: carteImage,
       date: t('latestAdditions.dateFormat.twoDaysAgo')
     },
     {
@@ -27,7 +33,7 @@ export default function LatestAdditions() {
       title: t('latestAdditions.items.2.title'),
       description: t('latestAdditions.items.2.description'),
       category: t('latestAdditions.items.2.category'),
-      image: '/src/assets/images/latestAdditions/Estampe.jpeg',
+      image: estampeImage,
       date: t('latestAdditions.dateFormat.fiveDaysAgo')
     },
     {
@@ -35,7 +41,7 @@ export default function LatestAdditions() {
       title: t('latestAdditions.items.3.title'),
       description: t('latestAdditions.items.3.description'),
       category: t('latestAdditions.items.3.category'),
-      image: '/src/assets/images/latestAdditions/Journal.jpeg',
+      image: journalImage,
       date: t('latestAdditions.dateFormat.oneWeekAgo')
     },
     {
@@ -43,7 +49,7 @@ export default function LatestAdditions() {
       title: t('latestAdditions.items.4.title'),
       description: t('latestAdditions.items.4.description'),
       category: t('latestAdditions.items.4.category'),
-      image: '/src/assets/images/latestAdditions/Livre.jpeg',
+      image: livreImage,
       date: t('latestAdditions.dateFormat.oneWeekAgo')
     },
     {
@@ -51,7 +57,7 @@ export default function LatestAdditions() {
       title: t('latestAdditions.items.5.title'),
       description: t('latestAdditions.items.5.description'),
       category: t('latestAdditions.items.5.category'),
-      image: '/src/assets/images/latestAdditions/Manuscrit.jpeg',
+      image: manuscritImage,
       date: t('latestAdditions.dateFormat.oneWeekAgo')
     },
     {
@@ -59,7 +65,7 @@ export default function LatestAdditions() {
       title: t('latestAdditions.items.6.title'),
       description: t('latestAdditions.items.6.description'),
       category: t('latestAdditions.items.6.category'),
-      image: '/src/assets/images/latestAdditions/Revue.jpeg',
+      image: revueImage,
       date: t('latestAdditions.dateFormat.oneWeekAgo')
     },
 
