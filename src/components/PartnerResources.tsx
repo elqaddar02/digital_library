@@ -1,4 +1,4 @@
-import { ExternalLink, Zap } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import bgExposition from '../assets/images/ressources/background.jpg';
 import ebsco from '../assets/images/ebsco-logo-color-screen.png';
@@ -11,15 +11,6 @@ interface Partner {
     url: string;
     category: string;
 }
-
-const categoryColors: Record<string, { bg: string; text: string; border: string }> = {
-    'International': { bg: 'bg-teal-50', text: 'text-teal-700', border: 'border-teal-200' },
-    'Standards': { bg: 'bg-gold-50', text: 'text-gold-700', border: 'border-gold-200' },
-    'Archive': { bg: 'bg-teal-50', text: 'text-teal-700', border: 'border-teal-200' },
-    'Network': { bg: 'bg-gold-50', text: 'text-gold-700', border: 'border-gold-200' },
-    'Community': { bg: 'bg-teal-50', text: 'text-teal-700', border: 'border-teal-200' },
-    'Platform': { bg: 'bg-gold-50', text: 'text-gold-700', border: 'border-gold-200' }
-};
 
 export default function PartnerResources() {
     const { t } = useTranslation();
@@ -90,16 +81,11 @@ export default function PartnerResources() {
             {/* Content */}
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
-                <div className="mb-16 md:mb-20 text-center max-w-3xl mx-auto">
-                    <div className="inline-flex items-center justify-center gap-2 mb-6">
-                        <div className="h-1 w-8 bg-gradient-to-r from-teal-500 to-transparent" />
-                        <span className="text-sm font-semibold text-teal-700 uppercase tracking-wide">Collaborations</span>
-                        <div className="h-1 w-8 bg-gradient-to-l from-teal-500 to-transparent" />
-                    </div>
-                    <h2 className="font-serif text-4xl md:text-5xl text-heritage-900 mb-6 leading-tight">
+                <div className="mb-12 md:mb-16 text-center">
+                    <h2 className="font-serif text-3xl md:text-4xl text-heritage-900 mb-4">
                         {t('partnerResources.title')}
                     </h2>
-                    <p className="text-lg text-heritage-600 leading-relaxed">
+                    <p className="text-lg text-heritage-700 max-w-2xl mx-auto">
                         {t('partnerResources.description')}
                     </p>
                 </div>
@@ -149,16 +135,14 @@ export default function PartnerResources() {
                     ))}
                 </div>
 
-                {/* Footer CTA Section */}
-                <div className="mt-20 pt-16 border-t border-heritage-100">
-                    <div className="max-w-2xl mx-auto text-center">
-                        <p className="text-heritage-600 mb-8 text-base leading-relaxed">
-                            {t('partnerResources.footerText')}
-                        </p>
-                        <button className="px-8 py-3 bg-gradient-to-r from-teal-600 to-teal-700 text-white rounded-lg hover:from-teal-700 hover:to-teal-800 transition-all duration-300 font-semibold text-sm shadow-md hover:shadow-lg hover:-translate-y-0.5">
-                            {t('partnerResources.footerCta')}
-                        </button>
-                    </div>
+                {/* Footer CTA */}
+                <div className="mt-16 text-center">
+                    <p className="text-gray-100 mb-6 text-sm">
+                        {t('partnerResources.footerText')}
+                    </p>
+                    <button className="px-6 py-3 border-2 border-white text-white rounded-sm hover:bg-white/10 transition-colors font-medium text-sm">
+                        {t('partnerResources.footerCta')}
+                    </button>
                 </div>
             </div>
         </section>
