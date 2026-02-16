@@ -19,7 +19,44 @@
     "title": "Latest Additions",
     "description": "Discover our newest collections and recently digitized materials",
     "viewAllButton": "View All Collections",
-    "viewDocument": "View document"
+    "viewDocument": "View document",
+    "dateFormat": {
+      "twoDaysAgo": "Added 2 days ago",
+      "fiveDaysAgo": "Added 5 days ago",
+      "oneWeekAgo": "Added 1 week ago"
+    },
+    "items": {
+      "1": {
+        "title": "Historical Maps Collection",
+        "description": "Rare cartographic documents showing the evolution of Morocco's geographical representation.",
+        "category": "Maps"
+      },
+      "2": {
+        "title": "Moroccan Engravings Heritage",
+        "description": "Exquisite engravings and prints documenting traditional Moroccan culture and customs.",
+        "category": "Engravings"
+      },
+      "3": {
+        "title": "Historical Moroccan Journals",
+        "description": "Digitized historical journals and newspapers providing insights into Morocco's past.",
+        "category": "Journals"
+      },
+      "4": {
+        "title": "Moroccan Literature Collection",
+        "description": "Rare books and literary works reflecting the rich traditions of Moroccan scholarship.",
+        "category": "Books"
+      },
+      "5": {
+        "title": "Fes Medina Manuscripts",
+        "description": "Islamic manuscripts and scholarly texts from the famous library of Fes.",
+        "category": "Manuscripts"
+      },
+      "6": {
+        "title": "Moroccan Cultural Reviews",
+        "description": "Collection of historical reviews and periodicals documenting Moroccan cultural developments.",
+        "category": "Reviews"
+      }
+    }
   },
   "featuredCollections": {
     "title": "Featured Collections",
@@ -63,7 +100,7 @@
   },
   "statistics": {
     "byTheNumbers": "By the Numbers",
-    "title": "Ibn Battuta in Numbers",
+    "title": "Moroccan Library by the Numbers",
     "documents": "Digital Items",
     "collections": "Collections",
     "users": "Active Users",

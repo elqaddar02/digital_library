@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Archive, Users, Globe, BookOpen } from 'lucide-react';
 
@@ -12,6 +12,8 @@ interface Stat {
 
 export default function Statistics() {
   const { t } = useTranslation();
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
   const [displayValues, setDisplayValues] = useState<{ [key: string]: number }>({
     documents: 0,
     collections: 0,
@@ -50,8 +52,29 @@ export default function Statistics() {
     },
   ];
 
-  // Animated count-up effect
+  // Intersection Observer to detect when section comes into view
   useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !isVisible) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [isVisible]);
+
+  // Animated count-up effect - only runs when section is visible
+  useEffect(() => {
+    if (!isVisible) return;
+
     const duration = 2000; // 2 seconds
     const startTime = Date.now();
 
@@ -72,7 +95,7 @@ export default function Statistics() {
     };
 
     animateCount();
-  }, []);
+  }, [isVisible]);
 
   const formatNumber = (num: number): string => {
     if (num >= 1000000) {
@@ -85,7 +108,7 @@ export default function Statistics() {
   };
 
   return (
-    <section className="py-16 md:py-20 bg-parchment-50 border-y border-heritage-100">
+    <section ref={sectionRef} className="py-16 md:py-20 bg-parchment-50 border-y border-heritage-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section intro - optional, can be removed for minimalism */}
         <div className="mb-12 text-center">
@@ -99,10 +122,15 @@ export default function Statistics() {
 
         {/* Stats grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-          {stats.map((stat) => (
+          {stats.map((stat, index) => (
             <div
               key={stat.id}
-              className="flex flex-col items-center text-center p-6 rounded-lg hover:bg-white/50 transition-colors duration-300"
+              className={`flex flex-col items-center text-center p-6 rounded-lg hover:bg-white/50 transition-colors duration-300 ${
+                isVisible ? `animate-fade-up` : `opacity-0`
+              }`}
+              style={{
+                animationDelay: isVisible ? `${index * 0.1}s` : '0s',
+              }}
             >
               {/* Icon */}
               <div className="mb-4 text-heritage-600">

@@ -16,51 +16,51 @@ export default function LatestAdditions() {
   const [items] = useState<CardItem[]>([
     {
       id: '1',
-      title: 'Royal Morocco Archives Collection',
-      description: 'Recently digitized royal documents and correspondence from the 18th century.',
-      category: 'Archives',
-      image: 'https://images.unsplash.com/photo-1524661135-423995f22d0b?w=500&h=400&fit=crop',
-      date: 'Added 2 days ago'
+      title: t('latestAdditions.items.1.title'),
+      description: t('latestAdditions.items.1.description'),
+      category: t('latestAdditions.items.1.category'),
+      image: '/src/assets/images/latestAdditions/Carte.jpeg',
+      date: t('latestAdditions.dateFormat.twoDaysAgo')
     },
     {
       id: '2',
-      title: 'Moroccan Textile Heritage',
-      description: 'Photographs and documentation of traditional Moroccan weaving techniques and patterns.',
-      category: 'Photography',
-      image: 'https://images.unsplash.com/photo-1524661135-423995f22d0b?w=500&h=400&fit=crop',
-      date: 'Added 5 days ago'
+      title: t('latestAdditions.items.2.title'),
+      description: t('latestAdditions.items.2.description'),
+      category: t('latestAdditions.items.2.category'),
+      image: '/src/assets/images/latestAdditions/Estampe.jpeg',
+      date: t('latestAdditions.dateFormat.fiveDaysAgo')
     },
     {
       id: '3',
-      title: 'Historical Maps of Morocco',
-      description: 'Rare cartographic documents showing the evolution of Morocco\'s borders and territories.',
-      category: 'Maps',
-      image: 'https://images.unsplash.com/photo-1524661135-423995f22d0b?w=500&h=400&fit=crop',
-      date: 'Added 1 week ago'
+      title: t('latestAdditions.items.3.title'),
+      description: t('latestAdditions.items.3.description'),
+      category: t('latestAdditions.items.3.category'),
+      image: '/src/assets/images/latestAdditions/Journal.jpeg',
+      date: t('latestAdditions.dateFormat.oneWeekAgo')
     },
     {
       id: '4',
-      title: 'Fes Medina Manuscript Collection',
-      description: 'Islamic manuscripts and scholarly texts from the famous library of Fes.',
-      category: 'Manuscripts',
-      image: 'https://images.unsplash.com/photo-1524661135-423995f22d0b?w=500&h=400&fit=crop',
-      date: 'Added 1 week ago'
+      title: t('latestAdditions.items.4.title'),
+      description: t('latestAdditions.items.4.description'),
+      category: t('latestAdditions.items.4.category'),
+      image: '/src/assets/images/latestAdditions/Livre.jpeg',
+      date: t('latestAdditions.dateFormat.oneWeekAgo')
     },
     {
       id: '5',
-      title: 'Moroccan Folk Art Collection',
-      description: 'Traditional crafts and artistic expressions from various regions of Morocco.',
-      category: 'Art',
-      image: 'https://images.unsplash.com/photo-1524661135-423995f22d0b?w=500&h=400&fit=crop',
-      date: 'Added 1 week ago'
+      title: t('latestAdditions.items.5.title'),
+      description: t('latestAdditions.items.5.description'),
+      category: t('latestAdditions.items.5.category'),
+      image: '/src/assets/images/latestAdditions/Manuscrit.jpeg',
+      date: t('latestAdditions.dateFormat.oneWeekAgo')
     },
     {
       id: '6',
-      title: 'Moroccan Architecture Collection',
-      description: 'Photographs and documentation of traditional Moroccan architectural styles and structures.',
-      category: 'Architecture',
-      image: 'https://images.unsplash.com/photo-1524661135-423995f22d0b?w=500&h=400&fit=crop',
-      date: 'Added 1 week ago'
+      title: t('latestAdditions.items.6.title'),
+      description: t('latestAdditions.items.6.description'),
+      category: t('latestAdditions.items.6.category'),
+      image: '/src/assets/images/latestAdditions/Revue.jpeg',
+      date: t('latestAdditions.dateFormat.oneWeekAgo')
     },
 
   ]);

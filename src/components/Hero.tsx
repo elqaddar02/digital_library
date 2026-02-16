@@ -1,8 +1,8 @@
 import { Search, Archive, Calendar } from 'lucide-react';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import heroBg from '../assets/images/hero-bg.png';
-import featuredDocImage from '../assets/images/LOGO.png';
+import heroBg from '../assets/images/bngbg.jpg';
+import featuredDocImage from '../assets/images/latestAdditions/Manuscrit.jpeg';
 
 export default function Hero() {
   const { t } = useTranslation();
@@ -40,16 +40,16 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/50 to-black/45" aria-hidden="true" />
 
       {/* Content */}
-      <div className="relative z-10 w-full h-full flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+      <div className="relative z-10 w-full h-full flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 py-10 md:py-20">
         <div className="max-w-4xl mx-auto w-full text-center">
           {/* Title */}
-          <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-white mb-6 font-bold"
+          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white mb-6 font-bold"
             style={{ lineHeight: '1.4' }}>
             {t('hero.title')}
           </h1>
 
           {/* Subtitle */}
-          <p className="text-lg md:text-xl text-gray-100 mb-12 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-md md:text-xl text-gray-100 mb-12 leading-relaxed max-w-2xl mx-auto">
             {t('hero.subtitle')}
           </p>
 
@@ -111,8 +111,9 @@ export default function Hero() {
                   <img
                     src={featuredDoc.image}
                     alt={featuredDoc.title}
-                    className="w-1/2 h-48 max-w-xs h-auto  flex-shrink-0 object-cover rounded border border-white/20"
+                    className="w-1/2 max-w-xs h-auto flex-shrink-0 object-cover rounded border border-white/20 animate-slide-in-left duration-1000"
                   />
+
                 </div>
               </div>
               <p className="text-xs text-gray-300 mt-3">{t('hero.featuredLabel')}</p>
