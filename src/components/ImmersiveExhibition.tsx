@@ -37,7 +37,7 @@ export default function ImmersiveExhibition() {
               <figure className="m-0">
                 <div className="relative overflow-hidden rounded-sm shadow-lg bg-heritage-100">
                   <img
-                    src={featured}
+                    src='https://digitalhub.fifa.com/transform/60ffa534-0fba-46f9-90b6-78d45a781764/Argentina-v-Morocco-Final-FIFA-U-20-World-Cup-Chile-2025?&io=transform:fill,width:1024&quality=75'
                     alt="Curated exhibition collection"
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                   />
