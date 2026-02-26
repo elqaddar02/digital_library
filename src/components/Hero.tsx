@@ -1,7 +1,7 @@
 import { Search, Archive, Calendar } from 'lucide-react';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import heroBg from '../assets/images/bngbg.jpg';
+import heroBg from '../assets/images/background-hero-bn.jpg';
 import featuredDocImage from '../assets/images/latestAdditions/Manuscrit.jpeg';
 
 export default function Hero() {
