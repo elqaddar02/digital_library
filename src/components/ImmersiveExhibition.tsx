@@ -1,7 +1,6 @@
 import { ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import background from '../assets/images/exposition/BG-EXPOSITION.png';
-import featured from '../assets/images/exposition/Featured.jpg';
 
 
 export default function ImmersiveExhibition() {
@@ -50,15 +49,16 @@ export default function ImmersiveExhibition() {
 
             {/* Right - Editorial Content */}
             <div className="lg:col-span-6 flex flex-col justify-center">
-              {/* Section Designation */}
-              <span className="text-xs font-semibold text-gold-300 uppercase tracking-widest mb-3 inline-block">
-                {t('immersiveExhibition.label')}
-              </span>
-
-              {/* Exhibition Title */}
-              <h2 className="font-serif text-3xl md:text-4xl text-white mb-4 leading-snug">
-                {t('immersiveExhibition.title')}
-              </h2>
+              {/* Section Title */}
+              <div className="mb-8 text-left">
+                <p className="text-xs font-semibold text-gold-300 uppercase tracking-widest mb-3 inline-block">
+                  {t('immersiveExhibition.label')}
+                </p>
+                <h2 className="font-serif text-3xl md:text-4xl text-white mb-4 leading-snug">
+                  {t('immersiveExhibition.title')}
+                </h2>
+                <div className="h-1 w-16 bg-gradient-to-r from-gold-400 to-amber-400 rounded-full"></div>
+              </div>
 
               {/* Thematic Description */}
               <div className="space-y-4 mb-8">

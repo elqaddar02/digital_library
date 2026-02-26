@@ -1,6 +1,7 @@
 import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import SectionTitle from './SectionTitle';
 import carteImage from '../assets/images/latestAdditions/Carte.jpeg';
 import estampeImage from '../assets/images/latestAdditions/Estampe.jpeg';
 import journalImage from '../assets/images/latestAdditions/Journal.jpeg';
@@ -111,15 +112,13 @@ export default function LatestAdditions() {
   return (
     <section className="py-16 md:py-24 bg-gradient-to-b from-white to-parchment-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section header */}
-        <div className="mb-12 text-center md:text-left">
-          <h2 className="font-serif text-3xl md:text-4xl text-heritage-900 mb-3">
-            {t('latestAdditions.title')}
-          </h2>
-          <p className="text-heritage-700 text-base md:text-lg max-w-2xl">
-            {t('latestAdditions.description')}
-          </p>
-        </div>
+        <SectionTitle
+          title={t('latestAdditions.title')}
+          description={t('latestAdditions.description')}
+          centered={true}
+          variant="dark"
+          accentColor="gold"
+        />
 
         {/* Carousel Container */}
         <div className="relative">

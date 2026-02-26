@@ -1,4 +1,6 @@
 import { BookOpen, Image, FileText, Archive } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import SectionTitle from './SectionTitle';
 
 const collections = [
   {
@@ -36,17 +38,17 @@ const collections = [
 ];
 
 export default function FeaturedCollections() {
+  const { t } = useTranslation();
   return (
     <section id="collections" className="py-16 md:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="font-serif text-3xl md:text-4xl text-heritage-900 mb-4">
-            Featured Collections
-          </h2>
-          <p className="text-lg text-heritage-700 max-w-2xl mx-auto">
-            Explore curated collections representing our most significant cultural and historical assets.
-          </p>
-        </div>
+        <SectionTitle
+          title={t('featuredCollections.title') || 'Featured Collections'}
+          description={t('featuredCollections.description') || 'Explore curated collections representing our most significant cultural and historical assets.'}
+          centered={true}
+          variant="dark"
+          accentColor="gold"
+        />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {collections.map((collection) => {

@@ -1,5 +1,6 @@
 import { ExternalLink } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import SectionTitle from './SectionTitle';
 import bgExposition from '../assets/images/ressources/background.jpg';
 import ebsco from '../assets/images/ebsco-logo-color-screen.png';
 
@@ -80,15 +81,13 @@ export default function PartnerResources() {
 
             {/* Content */}
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                {/* Section Header */}
-                <div className="mb-12 md:mb-16 text-center">
-                    <h2 className="font-serif text-3xl md:text-4xl text-heritage-900 mb-4">
-                        {t('partnerResources.title')}
-                    </h2>
-                    <p className="text-lg text-heritage-700 max-w-2xl mx-auto">
-                        {t('partnerResources.description')}
-                    </p>
-                </div>
+                <SectionTitle
+                    title={t('partnerResources.title')}
+                    description={t('partnerResources.description')}
+                    centered={true}
+                    variant="dark"
+                    accentColor="gold"
+                />
 
                 {/* Partner Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
