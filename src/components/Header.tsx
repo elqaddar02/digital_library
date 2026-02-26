@@ -1,7 +1,7 @@
 import { Menu, X, Globe, LogIn } from 'lucide-react';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import navLogo from '../assets/images/NAV-LOGO.png';
+import navLogo from '../assets/images/LOGO BN 11.png';
 
 const languages = [
   { code: 'en', label: 'English' },
@@ -43,7 +43,7 @@ export default function Header() {
             <img
               src={navLogo}
               alt="National Digital Library Logo"
-              className="h-20 w-auto"
+              className="h-24 w-auto"
             />
             {/* <div>
               <h1 className="font-serif text-xl text-heritage-900 font-semibold leading-tight">
