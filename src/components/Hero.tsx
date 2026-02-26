@@ -43,15 +43,21 @@ export default function Hero() {
       <div className="relative z-10 w-full h-full flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 py-10 md:py-20">
         <div className="max-w-6xl mx-auto w-full text-center">
           {/* Title */}
-          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white mb-6 font-bold"
-            style={{ lineHeight: '1.4' }}>
+            <h1 
+            className="font-serif text-4xl md:text-5xl lg:text-6xl text-white mb-6 font-extrabold"
+            style={{ 
+              lineHeight: '1.4',
+              textShadow: '0 10px 30px rgba(0,0,0,0.5), 2px 2px 0px rgba(255, 213, 46, 0.3), 4px 4px 0px rgba(215,178,33,0.2), 6px 6px 0px rgba(215,178,33,0.1)',
+              transform: 'perspective(1000px) rotateX(2deg)',
+              letterSpacing: '0.02em'
+            }}>
             {t('hero.title')}
-          </h1>
+            </h1>
 
           {/* Subtitle */}
-          <p className="text-md md:text-xl text-gray-100 mb-12 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-md md:text-xl text-gray-100 mb-12 leading-relaxed max-w-2xl mx-auto" style={{ fontFamily: 'ui-rounded', fontWeight: 200 }}>
             {t('hero.subtitle')}
-          </p>
+            </p>
 
           {/* Search bar - Primary action */}
           <form onSubmit={handleSearch} className="max-w-3xl mx-auto mb-16">
